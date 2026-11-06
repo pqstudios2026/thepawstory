@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional pet photography by PQ Studios in Hyderabad. Beautiful studio portraits, outdoor sessions and pet-and-family photography. Sessions starting at ₹5,999.">
+  <meta name="theme-color" content="#fbf8f3">
+  <title>Pet Photography in Hyderabad | PQ Studios</title>
+  <style>
+    :root {
+      --ink: #24211f;
+      --muted: #706a64;
+      --cream: #fbf8f3;
+      --paper: #fffdf9;
+      --red: #b72d32;
+      --red-dark: #922329;
+      --line: #e9e1d8;
+      --sand: #eee5da;
+      --radius: 22px;
+      --shadow: 0 18px 50px rgba(49, 35, 25, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--cream); color: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; object-fit: cover; }
+    .wrap { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+    .topbar { padding: 17px 0; background: rgba(251,248,243,.94); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; backdrop-filter: blur(12px); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-weight: 850; letter-spacing: .12em; font-size: 17px; line-height: 1.1; }
+    .brand small { display: block; color: var(--muted); font-size: 9px; letter-spacing: .22em; margin-top: 6px; font-weight: 650; }
+    .navlinks { display: flex; align-items: center; gap: 27px; font-size: 13px; font-weight: 650; color: #514b45; }
+    .btn { display: inline-flex; justify-content: center; align-items: center; gap: 9px; border: 0; border-radius: 999px; padding: 13px 21px; background: var(--red); color: white; font-size: 13px; font-weight: 750; cursor: pointer; transition: .2s ease; }
+    .btn:hover { background: var(--red-dark); transform: translateY(-2px); }
+    .btn-outline { background: transparent; border: 1px solid rgba(255,255,255,.7); color: white; }
+    .btn-outline:hover { background: white; color: var(--ink); }
+    .hero { padding: 42px 0 70px; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1.08fr; gap: 54px; align-items: center; }
+    .eyebrow { color: var(--red); text-transform: uppercase; letter-spacing: .2em; font-size: 10px; font-weight: 850; }
+    h1 { font-size: clamp(42px, 6vw, 72px); line-height: 1.02; letter-spacing: -.055em; margin: 18px 0; max-width: 590px; }
+    h1 em { color: var(--red); font-family: Georgia, serif; font-weight: 500; }
+    .lead { color: var(--muted); font-size: 17px; max-width: 480px; margin: 0 0 27px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .text-link { font-size: 13px; font-weight: 750; border-bottom: 1px solid var(--ink); padding: 8px 0; }
+    .hero-art { position: relative; min-height: 530px; }
+    .hero-main { height: 500px; border-radius: 190px 190px 24px 24px; box-shadow: var(--shadow); }
+    .hero-sticker { position: absolute; left: -30px; bottom: 28px; background: var(--paper); padding: 18px 22px; border-radius: 18px; box-shadow: var(--shadow); max-width: 205px; }
+    .hero-sticker strong { display: block; font-family: Georgia, serif; font-size: 22px; }
+    .hero-sticker span { font-size: 11px; color: var(--muted); }
+    .hero-note { position: absolute; right: -16px; top: 40px; background: var(--red); color: white; padding: 15px 18px; border-radius: 50%; width: 105px; height: 105px; display: grid; place-items: center; text-align: center; font-size: 11px; font-weight: 800; line-height: 1.25; transform: rotate(9deg); }
+    section { padding: 78px 0; }
+    .section-head { max-width: 650px; margin-bottom: 34px; }
+    h2 { font-size: clamp(31px, 4vw, 46px); letter-spacing: -.045em; line-height: 1.1; margin: 12px 0; }
+    .section-head p, .muted { color: var(--muted); }
+    .intro { background: var(--paper); }
+    .intro-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 60px; align-items: center; }
+    .intro-photo { height: 430px; border-radius: var(--radius); }
+    .ticks { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 25px; }
+    .tick { font-size: 13px; font-weight: 700; display: flex; gap: 9px; align-items: center; }
+    .tick b { color: var(--red); font-size: 17px; }
+    .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 17px; }
+    .service { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+    .service img { height: 185px; }
+    .service div { padding: 17px; }
+    .service h3 { margin: 0 0 5px; font-size: 16px; }
+    .service p { margin: 0; color: var(--muted); font-size: 12px; }
+    .gallery { background: #f0e8df; }
+    .gallery-grid { display: grid; grid-template-columns: 1.1fr .9fr .9fr; grid-template-rows: 220px 220px; gap: 14px; }
+    .gallery-grid img { height: 100%; border-radius: 17px; }
+    .gallery-grid img:first-child { grid-row: span 2; }
+    .gallery-grid img:last-child { grid-column: span 2; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
+    .price-card { background: var(--paper); border: 1px solid var(--line); border-radius: 21px; padding: 27px; display: flex; flex-direction: column; }
+    .price-card.featured { border: 2px solid var(--red); box-shadow: var(--shadow); transform: translateY(-8px); }
+    .plan { color: var(--red); font-size: 11px; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
+    .price { font-size: 36px; font-weight: 850; letter-spacing: -.05em; margin: 10px 0 3px; }
+    .price-card p { color: var(--muted); font-size: 13px; margin: 0 0 18px; }
+    .price-card ul { padding: 0; margin: 0 0 25px; list-style: none; flex: 1; }
+    .price-card li { padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+    .price-card li::before { content: "✓"; color: var(--red); font-weight: 900; margin-right: 9px; }
+    .fineprint { color: var(--muted); font-size: 11px; margin-top: 18px; }
+    .why { background: var(--paper); }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .why-item { padding: 25px; border: 1px solid var(--line); border-radius: 18px; }
+    .why-icon { font-size: 25px; }
+    .why-item h3 { font-size: 16px; margin: 12px 0 5px; }
+    .why-item p { font-size: 13px; color: var(--muted); margin: 0; }
+    .cta { padding: 78px 0; background: #282321; color: white; text-align: center; }
+    .cta h2 { max-width: 700px; margin: 12px auto; }
+    .cta p { color: #d4cbc3; max-width: 540px; margin: 0 auto 25px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .contact-card { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 25px; }
+    .contact-card h3 { margin-top: 0; }
+    .contact-card p { color: var(--muted); font-size: 14px; }
+    footer { padding: 25px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+    .footer-row { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .float-wa { position: fixed; right: 20px; bottom: 20px; z-index: 20; border-radius: 999px; padding: 14px 18px; background: #168b55; color: white; font-weight: 800; font-size: 13px; box-shadow: 0 8px 25px rgba(0,0,0,.2); }
+    @media (max-width: 850px) {
+      .navlinks { display: none; }
+      .hero-grid, .intro-grid { grid-template-columns: 1fr; gap: 30px; }
+      .hero { padding-top: 28px; }
+      .hero-art { min-height: 420px; }
+      .hero-main { height: 400px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .price-card.featured { transform: none; }
+      .why-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 28px, 1160px); }
+      .brand { font-size: 14px; }
+      .nav .btn { padding: 10px 14px; font-size: 11px; }
+      h1 { font-size: 46px; }
+      .lead { font-size: 15px; }
+      section { padding: 58px 0; }
+      .hero-art { min-height: 350px; }
+      .hero-main { height: 335px; border-radius: 130px 130px 20px 20px; }
+      .hero-sticker { left: -4px; bottom: 0; }
+      .hero-note { right: -3px; top: 15px; width: 85px; height: 85px; }
+      .ticks { grid-template-columns: 1fr; }
+      .services-grid { gap: 10px; }
+      .service img { height: 140px; }
+      .service div { padding: 12px; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 180px 150px 150px; gap: 9px; }
+      .gallery-grid img:first-child { grid-row: span 2; }
+      .gallery-grid img:last-child { grid-column: span 2; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .float-wa { right: 12px; bottom: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- IMPORTANT: Replace 91XXXXXXXXXX below with your WhatsApp number, including country code and without + or spaces. -->
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#home">PQ STUDIOS<small>PET PHOTOGRAPHY</small></a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#packages">Packages</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Hi%20PQ%20Studios%2C%20I%27d%20like%20to%20book%20a%20pet%20photography%20session." target="_blank" rel="noopener">Book a Session ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Pet photography · Hyderabad</div>
+          <h1>Every pet has a story. <em>Let's capture it.</em></h1>
+          <p class="lead">From playful paws to the little expressions you never want to forget — give your best friend a portrait worth keeping forever.</p>
+          <div class="hero-actions">
+            <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Hi%20PQ%20Studios%2C%20please%20share%20pet%20photography%20booking%20details." target="_blank" rel="noopener">Book Your Pet Shoot ↗</a>
+            <a class="text-link" href="#gallery">Explore our work ↓</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img class="hero-main" src="https://images.unsplash.com/photo-1551717743-49959800b1f6?auto=format&fit=crop&w=1100&q=85" alt="Happy dog enjoying a portrait session">
+          <div class="hero-note">MADE WITH<br>LOVE & PAWS</div>
+          <div class="hero-sticker"><strong>Little paws.</strong><span>Big personalities. Beautiful portraits.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="wrap intro-grid">
+        <img class="intro-photo" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1000&q=85" alt="Two dogs together outdoors">
+        <div>
+          <div class="eyebrow">A portrait experience for your best friend</div>
+          <h2>More than photographs. Memories with personality.</h2>
+          <p class="muted">At PQ Studios, we create relaxed, thoughtful portraits that celebrate the bond you share with your pet. Whether your companion is energetic, shy, curious or camera-ready, we'll make space for their personality to shine.</p>
+          <div class="ticks">
+            <div class="tick"><b>✓</b> Patient, pet-friendly sessions</div>
+            <div class="tick"><b>✓</b> Professional studio setup</div>
+            <div class="tick"><b>✓</b> Pet and family portraits</div>
+            <div class="tick"><b>✓</b> Hyderabad and on-location options</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">What we photograph</div>
+          <h2>Every kind of pet. Every kind of personality.</h2>
+          <p>Choose a studio portrait, an outdoor session or a relaxed shoot with the whole family.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=700&q=80" alt="Golden retriever portrait"><div><h3>Dog Photography</h3><p>Expressive portraits, playful moments and action shots.</p></div></article>
+          <article class="service"><img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=700&q=80" alt="Cat portrait"><div><h3>Cat Photography</h3><p>Beautiful portraits that capture every curious look.</p></div></article>
+          <article class="service"><img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=700&q=80" alt="Puppy portrait"><div><h3>Puppy Portraits</h3><p>Save those tiny paws and once-in-a-lifetime stages.</p></div></article>
+          <article class="service"><img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=700&q=80" alt="Dog with owner"><div><h3>Pet & Family</h3><p>Portraits of the people and pets who belong together.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">The little moments</div>
+          <h2>Love, loyalty and a little bit of mischief.</h2>
+          <p>A glimpse of the joyful world of pet portraits. Replace these sample photographs with your own PQ Studios portfolio before publishing.</p>
+        </div>
+        <div class="gallery-grid">
+          <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=900&q=85" alt="Dog portrait outdoors">
+          <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=700&q=85" alt="Cat close-up portrait">
+          <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=700&q=85" alt="Happy dog close-up">
+          <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=1000&q=85" alt="Dog enjoying an outdoor moment">
+        </div>
+      </div>
+    </section>
+
+    <section id="packages">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Simple, transparent packages</div>
+          <h2>Choose the session that feels right.</h2>
+          <p>Give your pet a photo experience they'll feel comfortable in — and you'll treasure for years.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <div class="plan">Classic</div><div class="price">₹5,999</div><p>A lovely first portrait experience.</p>
+            <ul><li>Studio photography session</li><li>15 professionally edited photos</li><li>Digital delivery</li></ul>
+            <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Hi%20PQ%20Studios%2C%20I%27m%20interested%20in%20the%20Classic%20pet%20photography%20package." target="_blank" rel="noopener">Enquire about Classic</a>
+          </article>
+          <article class="price-card featured">
+            <div class="plan">Premium · Popular</div><div class="price">₹8,999</div><p>More moments, plus a keepsake for your home.</p>
+            <ul><li>Studio or client-location option</li><li>30 professionally edited photos</li><li>1 table frame included</li><li>Digital delivery</li></ul>
+            <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Hi%20PQ%20Studios%2C%20I%27m%20interested%20in%20the%20Premium%20pet%20photography%20package." target="_blank" rel="noopener">Enquire about Premium</a>
+          </article>
+          <article class="price-card">
+            <div class="plan">Luxury</div><div class="price">₹14,999</div><p>More time to create a special collection.</p>
+            <ul><li>4-hour photography session</li><li>Studio or client-location option</li><li>Personalised session planning</li><li>Contact us for package inclusions</li></ul>
+            <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Hi%20PQ%20Studios%2C%20please%20share%20the%20Luxury%20pet%20photography%20package%20details." target="_blank" rel="noopener">Enquire about Luxury</a>
+          </article>
+        </div>
+        <p class="fineprint">Additional hour: ₹2,000. Classic package is studio-only. Premium and Luxury include the option of a client-location session. Please confirm availability and final inclusions while booking.</p>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Why PQ Studios</div>
+          <h2>A comfortable shoot. A thoughtful finish.</h2>
+        </div>
+        <div class="why-grid">
+          <article class="why-item"><div class="why-icon">📸</div><h3>Professional studio</h3><p>A dedicated photography space and professional lighting for polished portraits.</p></article>
+          <article class="why-item"><div class="why-icon">🐾</div><h3>Pet-first approach</h3><p>We allow time for your pet to settle in and be themselves during the session.</p></article>
+          <article class="why-item"><div class="why-icon">♡</div><h3>Made to keep</h3><p>Carefully edited photographs and selected keepsakes to enjoy long after the shoot.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <div class="eyebrow" style="color:#f2aaa8">Your pet deserves the spotlight</div>
+        <h2>Let's make something you'll love looking back on.</h2>
+        <p>Tell us a little about your pet and we'll help you choose the right photography session.</p>
+        <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Hi%20PQ%20Studios%2C%20I%27d%20like%20to%20book%20a%20pet%20photography%20session." target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Visit or get in touch</div>
+          <h2>Let's plan your pet's photoshoot.</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>PQ Studios</h3>
+            <p><strong>Studio:</strong> Pragathi Nagar, Hyderabad, Telangana – 500090</p>
+            <p><strong>Website:</strong> <a href="https://pqstudios.net" target="_blank" rel="noopener">pqstudios.net</a></p>
+            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/pqstudios_hyd/" target="_blank" rel="noopener">@pqstudios_hyd</a></p>
+            <p><strong>Email:</strong> <a href="mailto:Info@pqstudios.net">Info@pqstudios.net</a></p>
+          </div>
+          <div class="contact-card">
+            <h3>Ready to book?</h3>
+            <p>Send us your pet's name, breed and a preferred date. We'll get back to you with the next steps.</p>
+            <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Hi%20PQ%20Studios!%20My%20pet%27s%20name%20is%20____%20and%20I%27d%20like%20to%20know%20about%20booking." target="_blank" rel="noopener">Start a WhatsApp Chat ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>© <span id="year">2026</span> PQ Studios. All rights reserved.</span>
+      <span>Pet Photography · Hyderabad · Across India</span>
+    </div>
+  </footer>
+  <a class="float-wa" href="https://wa.me/91XXXXXXXXXX?text=Hi%20PQ%20Studios%2C%20I%27d%20like%20to%20enquire%20about%20pet%20photography." target="_blank" rel="noopener" aria-label="Chat with PQ Studios on WhatsApp">WhatsApp ↗</a>
+</body>
+</html>
